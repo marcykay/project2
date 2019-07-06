@@ -1,0 +1,94 @@
+@@font-face {
+	font-family: 'Rock Salt', 'Roboto';
+	src: url("../fonts/RockSalt-Regular.ttf");
+}
+
+* {
+	box-sizing: border-box;
+	/* border: 1px dotted red; */
+}
+/* #FF0000;
+#CC0000
+#3B4CCA
+#FFDE00
+#B3A125 */
+body,
+html {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	font-family: "Rock Salt", "Roboto", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	/* background-color: black; */
+	background-color: #75ABDC;
+}
+header {
+	width:100vw;
+	height:5vh;
+	background-image: url("../images/banner.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+h1 {
+	color: black;
+	font-family: "Rock Salt";
+	margin-block-start: 0.3rem;
+	margin-block-end: 0.3rem;
+}
+
+.game_main_control_container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.main_container {
+	text-align: center;
+}
+
+.map_container {
+	margin: 0 auto;
+	padding: 2px;
+	width: min-content;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	background-color: #75ABDC;
+	gap: 2px;
+	border-radius: 0.6rem;
+}
+
+.tiles {
+	width: 100%;
+	height: 100%;
+	background-color: #E9D6CB;
+	border-radius: 10px;
+}
+
+.newtiles {
+	width: 100%;
+	height: 100%;
+	background-color: #E9D6CB;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 10px;
+	border: none;
+}
+
+h1 {
+	color: #3B4CCA;
+	text-align: center;
+	font-size: 3em;
+}
+
+#output {
+	text-align: center;
+}
