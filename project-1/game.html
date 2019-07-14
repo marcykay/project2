@@ -11,51 +11,38 @@
 </head>
 
 <body>
+    <audio id="myAudio">
+        <source src="sounds/PowerUp14.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <header></header>
+
     <div class="game_main_control_container">
-        game_main_control_container
-        <button id="button_start" type="button" name="start">START</button>
+        <button id="button_start" class="button" type="button" name="start"></button>
+        <button id="button_gamesize" class="button" type="button" name="gamesize"></button>
+        <button id="button_player_mode" class="button" type="button" name="start"></button>
+        <button id="button_help" class="button" type="button" name="help"></button>
+        <button id="button_exit" class="button" type="button" name="exit"></button>
+    </div>
+    </div>
+    <div id="instruction">
+        <div class="pic1"></div>
     </div>
 
     <div class="main_container">
-        main_container
-        <div class="map_container">
-
+        <div class="wrapper">
+            <div class="map_container1"></div>
+            <div id="output1" class="msgCloud"></div>
+        </div>
+        <div class="wrapper">
+            <div class="map_container2"></div>
+            <div id="output2" class="msgCloud"></div>
         </div>
     </div>
 
-    <div id="output">
-        <p></p>
-    </div>
     <div id="ingame_controls_container" class="ingame_controls_container">
-        ingame_controls_container
-        <div class"newtiles"></div>
+        <div class="newtiles"></div>
     </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-<!--  <div id="0-0" class="tiles">1</div>
-<div id="0-1" class="tiles">2</div>
-<div id="0-2" class="tiles">3</div>
-<div id="0-3" class="tiles">4</div>
-<div id="1-0" class="tiles">5</div>
-<div id="1-1" class="tiles">6</div>
-<div id="1-2" class="tiles">7</div>
-<div id="1-3" class="tiles">8</div>
-<div id="2-0" class="tiles">9</div>
-<div id="2-1" class="tiles">10</div>
-<div id="2-2" class="tiles">11</div>
-<div id="2-3" class="tiles">12</div>
-<div id="3-0" class="tiles">13</div>
-<div id="3-1" class="tiles">14</div>
-<div id="3-2" class="tiles">15</div>
-<div id="3-3" class="tiles">16</div>           -->
