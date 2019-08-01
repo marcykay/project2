@@ -1,0 +1,20 @@
+body {
+    background-image: url("../images/6828.jpg");
+}
+
+.btn-floating.halfway-fab {
+    top: -20px;
+    right: -20px;
+}
+
+.btn-block {
+    width:100%;
+}
+
+.card-action>.btn-floating {
+    margin-right: 10px;
+}
+
+div.card{
+
+}
