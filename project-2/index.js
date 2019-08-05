@@ -3,12 +3,13 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 
 
+
+
 /**
  * ===================================
  * Configurations and set up
  * ===================================
  */
-
 
 
 // Init express app
@@ -22,6 +23,8 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
+
+
 
 // Set react-views to be the default view engine
 const reactEngine = require('express-react-views').createEngine();
@@ -63,6 +66,8 @@ setRoutesFunction(app, allModels);
 const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => console.log('~~~ Tuning in to the waves of port ' + PORT + ' ~~~'));
+
+
 
 let onClose = function() {
 

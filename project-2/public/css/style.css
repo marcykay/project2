@@ -1,5 +1,10 @@
 body {
-    background-image: url("../images/6828.jpg");
+    background-image: url("../images/wallpaper.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #030425;
+    background-attachment: fixed;
 }
 
 .btn-floating.halfway-fab {
@@ -15,6 +20,94 @@ body {
     margin-right: 10px;
 }
 
-div.card{
+.card .card-action:last-child {
+  /* border-radius: 0 0 5px 5px; */
+}
 
+#dummy_note > div.card-content{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.card-content, div.entryform{
+    padding: 0 16px 0 16px !important;
+}
+div.input-field{
+    margin:5px 0 0 0 !important;
+}
+p.text-shadow-white{
+    text-shadow: 0px 0px 10px white;
+}
+
+h4{
+    padding: 0;
+    margin: 0;
+}
+.image-uploader-window{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+
+}
+.fixed-action-btn ul {
+    text-align: left !important;
+}
+.submit-imageform{
+}
+.mother-flex{
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+}
+.flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: auto;
+    width: 90%;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 7px;
+}
+
+.flex-item>img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+}
+
+.flex-item {
+    margin: 7px;
+    box-shadow: 3px 5px 8px 0 rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+    max-width: 31%;
+    min-width: 180px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-item:hover {
+    box-shadow: 3px 5px 34px 0 rgba(0, 0, 0, 1.0);
+}
+
+.login-card {
+    margin-top: 100px;
+    opacity: 0.9;
+}
+.login label{
+    color: #ccc;
+}
+.login-card .card{
+    background: rgba{0, 0, 0, 0.6};
+    /* opacity: 0.9; */
+
+}
+.cardTitle {
+    padding: 2px 16px;
+    background-color: white;
+    border-radius: 10px;
 }

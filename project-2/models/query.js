@@ -7,12 +7,14 @@ module.exports = (dbPoolInstance) => {
 
     let addNewNote = (values, callback) => {
         console.log("add new note");
-        let query = 'INSERT INTO notes (title, content, image, owner_id) values ($1, $2, $3, $4) returning *';
+        let query = 'INSERT INTO notes (title, content, image, owner_id, color) values ($1, $2, $3, $4, $5) returning *';
         dbPoolInstance.query(query, values, (error, queryResult) => {
             if (error) {
                 callback(error, null);
             } else {
                 if (queryResult.rows.length > 0) {
+                    console.log("@addNewNote after query stage");
+                    console.log(queryResult.rows);
                     callback(null, queryResult.rows);
                 } else {
                     callback(null, null);
@@ -25,6 +27,7 @@ module.exports = (dbPoolInstance) => {
         let query = 'DELETE FROM notes WHERE id=$1';
         let values = [];
         values.push(notes_id);
+        console.log(values);
         dbPoolInstance.query(query, values, (error, queryResult) => {
             if (error) {
                 callback(error, null);
@@ -41,7 +44,7 @@ module.exports = (dbPoolInstance) => {
     let editNote = (values, callback) => {
         console.log("edit note");
         console.log(values);
-        let query = 'UPDATE notes SET title=($1), content=($2), image=($3) WHERE id=($4) RETURNING *';
+        let query = 'UPDATE notes SET title=($1), content=($2), image=($3), color=($5) WHERE id=($4) RETURNING *';
         dbPoolInstance.query(query, values, (error, queryResult) => {
             console.log(queryResult);
             console.log(error);
@@ -82,7 +85,7 @@ module.exports = (dbPoolInstance) => {
 
     let getAllNotes = (data, callback) => {
         console.log("get all notes");
-        let query = `SELECT * FROM notes WHERE owner_id=$1`;
+        let query = `SELECT * FROM notes WHERE owner_id=$1 ORDER BY edited_time DESC`;
         let values = [];
         values.push(data);
         dbPoolInstance.query(query, values, (error, queryResult) => {
